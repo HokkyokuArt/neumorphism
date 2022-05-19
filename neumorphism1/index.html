@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/412311175c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Neumorphism 1</title>
+</head>
+
+<body class="light">
+    <h1 class="title">Light Mode</h1>
+    <ul>
+        <li>
+            <button>
+                <i class="fas fa-phone"></i>
+            </button>
+        </li>
+        <li>
+            <button>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </li>
+        <li>
+            <button>
+                <i class="fas fa-moon"></i>
+            </button>
+        </li>
+        <li>
+            <button>
+                <i class="fas fa-wifi"></i>
+            </button>
+        </li>
+        <li>
+            <button>
+                <i class="fab fa-bluetooth-b"></i>
+            </button>
+        </li>
+
+    </ul>
+    <button class="mode">
+        <span class="material-symbols-outlined btn_darkMode">
+            flashlight_off
+        </span>
+    </button>
+    <script>
+        const mode = document.querySelector('.mode')
+        const btn_darkMode = document.querySelector('.btn_darkMode')
+        const title = document.querySelector('.title')
+
+        let body = {
+            'element': document.querySelector('body'),
+            'dark': false
+        }
+
+        mode.addEventListener('click', () => {
+            if (body.dark === false) {
+                body.dark = true
+                body.element.className = 'dark'
+                btn_darkMode.textContent = 'flashlight_on'
+                title.textContent = 'Dark Mode'
+            } else {
+                body.dark = false
+                body.element.className = 'light'
+                btn_darkMode.textContent = 'flashlight_off'
+                title.textContent = 'Light Mode'
+            }
+        })
+
+        const btns = document.querySelectorAll('li > button')
+        btns.forEach(btn => {
+            btn.addEventListener('click', ()=>{
+                btn.classList.toggle('active')
+            })
+        });
+    </script>
+
+</body>
+
+</html>
