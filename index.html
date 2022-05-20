@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: monospace;
         }
-        body{
+
+        body {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -19,29 +22,47 @@
             align-items: center;
             gap: 20px;
             flex-direction: column;
+            background-image: url(./GRU.jpg);
+            background-size: 100%;
+            background-position: center;
 
         }
-        button{
-            padding: 5px 10px;
+
+        a {
             width: auto;
             height: auto;
+
+        }
+
+        button {
+            padding: 5px 10px;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .btn1 {
+            background-image: url(./GRU.jpg);
+        }
+
+        .btn2 {
+            background-image: url(./reverse_GRU.jpg);
         }
     </style>
 </head>
+
 <body>
 
-        <h1>
-            Portifólio Neumorphism
-        </h1>
+    <h1>
+        Portifólio Neumorphism
+    </h1>
     <div>
-        <a href="/neumorphism1/index.html" target="blank">
-            <button>Neumorphism 1</button>
-        </a>
-        <a href="" target="blank">
-            <button>Neumorphism 2</button>
-        </a>
+        <a href="/neumorphism1/index.html" target="blank"><button class="btn1">Neumorphism 1</button></a>
+        <a href="./card/card.html" target="blank"><button class="btn2">Card</button></a>
     </div>
-    
-    
+
 </body>
+
 </html>
