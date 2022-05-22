@@ -1,4 +1,4 @@
-# Portfolio's Artico
+# Artico's Portfolio
 
 Hi, my name is Jean, but you can call me Artico.
 This is my portfolio to work, test and be a little bit funny depending on the day...
