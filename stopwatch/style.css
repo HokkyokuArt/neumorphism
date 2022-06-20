@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+
+}
+
+body {
+    min-height: 100vh;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 600px;
+    height: 200px;
+    max-height: 95vh;
+    padding: 0 20px;
+    background-color: inherit;
+    border-radius: 15px;
+    box-shadow:
+        5px 5px 10px rgba(48, 48, 48, 0.3),
+        inset 5px 5px 10px rgba(80, 80, 80, 0.3),
+        inset -5px -5px 10px rgba(48, 48, 48, 0.55);
+}
+
+#ipt {
+    font-family: 'Roboto Mono', monospace;
+    color: #ff0000d2;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    background-color: inherit;
+    box-shadow:
+        inset -2px -2px 5px rgba(80, 80, 80, 0.3),
+        inset 2px 2px 5px rgba(48, 48, 48, 0.55);
+    text-shadow:
+        0 0 7px #ff0000;
+    font-size: 2.5rem;
+
+  
+
+
+}
+
+.btns {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.btn {
+    color: #222;
+    font-size: 1.3em;
+    padding: 10px;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow:
+        2px 2px 5px rgba(48, 48, 48, 0.3),
+        inset 5px 3px 5px rgba(80, 80, 80, 0.3),
+        inset -5px -3px 5px rgba(48, 48, 48, 0.55);
+    cursor: pointer;
+    width: 40%;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    transition: 0.3s;
+
+}
+
+.btn:hover {
+    color: rgb(206, 206, 206);
+    box-shadow:
+        inset -3px -3px 5px rgba(80, 80, 80, 0.3),
+        inset 3px 3px 5px rgba(48, 48, 48, 0.55);
+        text-shadow:
+            0 0 3px white,
+            0 0 5px var(--clr),
+            0 0 10px var(--clr);
+}
+.teste:hover{
+    text-shadow:
+            0 0 3px white,
+            0 0 5px #ffff00,
+            0 0 10px #ffff00;
+}
+
+
+/* color: var(--clr); */
+/* 
+font-family: 'Aldrich', sans-serif;
+font-family: 'Cute Font', cursive;
+font-family: 'DotGothic16', sans-serif;
+font-family: 'Electrolize', sans-serif;
+font-family: 'Geo', sans-serif;
+font-family: 'Geostar', cursive;
+font-family: 'Iceberg', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Qahiri', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik', sans-serif;
+font-family: 'Stint Ultra Expanded', cursive;
+font-family: 'Syncopate', sans-serif;
+font-family: 'VT323', monospace; 
+*/
