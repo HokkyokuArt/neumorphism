@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: -webkit-linear-gradient(-110deg, #C15Cff, #FF5454);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.glass {
+    position: absolute;
+    width: 530px;
+    height: 300px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow:
+        3px 10px 40px 0 rgba(31, 38, 135, 0.2),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(4px);
+
+}
+
+.loader {
+    position: relative;
+    color: #FF5454;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loader span {
+    mix-blend-mode: difference;
+    font-family: 'Jaldi', sans-serif;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 15px);
+    left: -30px;
+    top: 6px;
+    width: calc(0% - 18px);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(85, 11, 100);
+    color: black;
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateX(0px);
+        width: 0%;
+    }
+
+    50% {
+        transform: translateX(0px);
+        width: 113%;
+    }
+
+    100% {
+        transform: translateX(327px);
+        width: 0%;
+    }
+}
