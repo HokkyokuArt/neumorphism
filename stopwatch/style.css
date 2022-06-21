@@ -91,7 +91,7 @@ div.container {
             0 0 5px var(--clr),
             0 0 10px var(--clr);
 }
-.teste:hover{
+.pause:hover{
     text-shadow:
             0 0 3px white,
             0 0 5px #ffff00,

@@ -10,13 +10,13 @@ btnStop.addEventListener('click', click_Stop)
 function click_StartPause() {
     if (!click) {
         time = setInterval(() => { visor() }, 10)
-        btnstartPause.classList.add('teste')
+        btnstartPause.classList.add('pause')
         btnstartPause.textContent = 'PAUSE'
         click = true
     } else {
         clearInterval(time)
         btnstartPause.textContent = 'START'
-        btnstartPause.classList.remove('teste')
+        btnstartPause.classList.remove('pause')
         click = false
     }
 }
@@ -32,7 +32,7 @@ function click_Stop() {
     click = false
     ipt.value = `00:00:00:00`;
     btnstartPause.textContent = 'START'
-    btnstartPause.classList.remove('teste')
+    btnstartPause.classList.remove('pause')
 }
 
 function visor() {
