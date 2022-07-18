@@ -1,89 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-direction: column;
-            background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/1434972-fundo-roxo-escuro-com-linhas-tortas-vetor.jpg);
-            backdrop-filter: blur(5px);
-            background-size: cover;
-            background-position: center;
-    
-        }
-
-
-        .glass_card {
-
-            position: absolute;
-            width: 350px;
-            height: 200px;
-            background: rgba(104, 14, 142, 0.35);
-            box-shadow: 5PX 8px 32px 0 rgba(31, 38, 135, 0.37),
-                inset 0.5px 0.5px 0.5px rgb(255, 255, 255);
-            backdrop-filter: blur(13.5px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            padding: 25px 15px;
-            transition: 0.5s;
-            flex-direction: column;
-            gap: 20px;
-
-        }
-        .name{
-            transition: 0.3s;
-        }
-        .teste{
-            opacity: 0.07;
-            transition: 0.3s;
-            align-self: center;
-            transform: rotateY(180deg);
-
-        }
-        .glass_card:hover{
-            transform: rotateY(180deg);
-        }
-        .glass_card:hover .teste{
-            opacity: 1;
-            transform: rotateY(180deg);
-        }
-        .glass_card:hover .name{
-            opacity: 0.07;
-
-        }
-        h2 {
-            text-shadow: 1px 1px 10px black,
-                -1px -1px 3px rgba(221, 0, 255, 0.337);
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link rel="stylesheet" href="glassCard.css">
+    <title>Glass Card</title>
 </head>
+
 <body>
     <div class="glass_card">
-        <h2 class="teste">CVV 999</h2>
-        <h2 class="name">JEAN A BENETTI</h2>
-        <h2 class="name">9999 9999 9999 9999</h2>
-        
+        <div class="face back">
+
+            <p>CVV 999</p>
+        </div>
+
+        <div class="face front">
+
+            <div class="divFlag">
+                <div class="logoFlag"></div>
+            </div>
+
+            <div class="divChip">
+                <div class="chip material-symbols-rounded">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="divName">
+                <img src="../GRU.jpg" alt="logo">
+                <p class="name">Artico Benetti</p>
+            </div>
+        </div>
     </div>
-    
+    <script>
+        const card = document.querySelector('.glass_card')
+        card.addEventListener('click', () => {
+            if (card.classList[1] === undefined) card.classList.add('rotate')
+            else card.classList.remove('rotate')
+        })
+    </script>
 </body>
+
 </html>
