@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(170, 148, 250);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    /* -webkit-box-reflect:below 0 linear-gradient(transparent,rgb(170, 148, 250) ); */
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translateX(50%);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #fff;
+    transition: 1s;
+
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-180deg);
+}
+
+.card .imgBox .img img{
+    clip-path: polygon(15% 3%, 37% 97%, 97% 25%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
+.card .imgBox .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(252, 146, 48);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+}
+
+.card .imgBox .img:nth-child(2){
+    transform: rotateY(180deg);
+    background: #ddd8d8;
+}
+.card .imgBox .img h1,
+.card .imgBox .img p {
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+.card .imgBox .img p {
+    color: #5c5c5c;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card .details .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .details .content h2 {
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1.3em;
+}
+
+.card .details .content h2 span#name {
+    color: rgb(252, 146, 48);
+    font-size: 1.5em;
+}
+
+.card .details .content h2 span {
+    color: #e21212;
+    font-size: 0.8em;
+}
