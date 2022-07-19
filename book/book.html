@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./book.css">
-    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Card Book</title>
 </head>
+
 <body>
 
     <div class="card">
-        <div class="imgBox">
-            <div class="img"><h1>Hi :)</h1><p>hover me</p></div>
-            <div class="img">
+        <div class="cover">
+            <div class="face">
+                <h1>Hi :)</h1>
+                <p>hover me</p>
+                <div class="pag"></div>
+            </div>
+            <div class="face">
                 <img src="./itsme.jpg" alt="">
             </div>
         </div>
         <div class="details">
             <div class="content">
-                <h2>My name is<br><br><span id="name">Artico</span><br><br>Im am a <span>Web Developer </span></h2>
+                <h2>My name is<br><br><span id="name">Artico</span><br><br>I am <span>Web Developer </span></h2>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jean-artico-017160220/" target="_blank">
+                        <ion-icon class="icon btn" name="logo-linkedin"></ion-icon>
+                        <span class="btn">Jean Artico</span>
+                    </a>
+                    <a href="https://github.com/HokkyokuArt" target="_blank">
+                        <ion-icon class="icon" name="logo-github"></ion-icon>
+                        <span class="btn">HokkyokuArt</span>
+                    </a>
+                    <a href="https://www.instagram.com/artico_benetti/" target="_blank">
+                        <ion-icon class="icon" name="logo-instagram"></ion-icon>
+                        <span class="btn">@artico_benetti</span></a>
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
-    
+
 </body>
+
 </html>

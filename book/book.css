@@ -21,15 +21,17 @@ body {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
-    /* -webkit-box-reflect:below 0 linear-gradient(transparent,rgb(170, 148, 250) ); */
     transition: 1s;
+    transition-delay: .2s;
 }
 
 .card:hover {
     transform: translateX(50%);
+    transition-delay: .3s;
+
 }
 
-.card .imgBox {
+.card .cover {
     position: relative;
     width: 100%;
     height: 100%;
@@ -38,14 +40,53 @@ body {
     transform-style: preserve-3d;
     background: #fff;
     transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    transition-delay: .3s;
 
 }
 
-.card:hover .imgBox {
+.card:hover .cover {
     transform: rotateY(-180deg);
+    transition-delay: .2s;
+
 }
 
-.card .imgBox .img img{
+.card .cover .face .pag {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    height: 0px;
+    border-left: solid 0px #fff;
+    border-bottom: solid 0px rgb(223, 223, 223);
+    background-color: #333;
+    animation: pag 2.5s ease infinite;
+    animation-delay: 2s;
+
+}
+
+@keyframes pag {
+    0% {
+        border-left: solid 0px #fff;
+        border-bottom: solid 0px rgb(116, 116, 116);
+    }
+
+    30%{
+        border-left: solid 30px #fff;
+        border-bottom: solid 30px rgb(236, 236, 236);
+    }
+    50%{
+        border-left: solid 0px #fff;
+        border-bottom: solid 0px rgb(116, 116, 116);
+    }
+    100% {
+        border-left: solid 0px #fff;
+        border-bottom: solid 0px rgb(116, 116, 116);
+        
+    }
+}
+
+.card .cover .face img {
     clip-path: polygon(15% 3%, 37% 97%, 97% 25%);
     position: absolute;
     top: 0;
@@ -55,7 +96,8 @@ body {
     object-fit: cover;
     transform-style: preserve-3d;
 }
-.card .imgBox .img {
+
+.card .cover .face {
     position: absolute;
     top: 0;
     left: 0;
@@ -69,20 +111,17 @@ body {
     color: white;
     transform-style: preserve-3d;
     backface-visibility: hidden;
+    text-align: center;
+    letter-spacing: 0.3em;
 
 }
 
-.card .imgBox .img:nth-child(2){
+.card .cover .face:nth-child(2) {
     transform: rotateY(180deg);
     background: #ddd8d8;
 }
-.card .imgBox .img h1,
-.card .imgBox .img p {
-    text-align: center;
-    letter-spacing: 0.3em;
-}
 
-.card .imgBox .img p {
+.card .cover .face p {
     color: #5c5c5c;
 }
 
@@ -92,7 +131,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,4 +158,60 @@ body {
 .card .details .content h2 span {
     color: #e21212;
     font-size: 0.8em;
+}
+
+.card .details .content .social-icons {
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+
+}
+
+.card .details .content .social-icons a {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: .3s linear;
+    transition-delay: .2s;
+}
+
+.card .details .content .social-icons a .btn {
+    position: absolute;
+}
+
+.card .details .content .social-icons a:hover {
+    cursor: pointer;
+    width: 120px;
+    border-radius: 50px;
+    background-color: rgb(116, 0, 170);
+}
+
+.card .details .content .social-icons a .icon {
+    transition: .2s ease-out;
+    transition-delay: .2s;
+}
+
+.card .details .content .social-icons a:hover .icon {
+    transform: scale(0);
+    transition: .2s ease-in;
+}
+
+.card .details .content .social-icons a span {
+    font-size: .7em;
+    transform: scale(0);
+    transition: .2s;
+}
+
+.card .details .content .social-icons a:hover span {
+    transform: scale(1);
+    transition: .3s;
+    transition-delay: .35s;
 }
