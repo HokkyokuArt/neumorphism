@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.div-title{
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.div-title h1{
+    font-size: 4em;
+    font-family: 'Splash', cursive;
+    color: #4973ff;
+}
+
+.div-circle{
+    flex-grow: 3;
+}
+
+.circle{
+    width: 300px;
+    aspect-ratio: 1/1;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 5px #4973ff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wave{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #4973ff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #0000004f;
+}
+
+.wave::before,
+.wave::after{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: #000;
+}
+
+.wave::before{
+    border-radius: 45%;
+    background: #fff;
+    animation: animate 7.5s linear infinite;
+}
+
+.wave::after{
+    border-radius: 40%;
+    background: hsla(0, 0%, 100%,.5);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-75%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(-360deg);
+    }
+}
