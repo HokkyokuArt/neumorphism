@@ -1,0 +1,265 @@
+label {
+    background-color: #00bfff;
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    box-shadow:
+        inset 3px 3px 3px #224c5a8e,
+        -1px -1px 2px #224c5a5e,
+        2px 2px 2px #ffffff83;
+}
+
+label input {
+    appearance: none;
+}
+
+label input::before {
+    content: '';
+    width: 30%;
+    height: 80%;
+    background-color: rgb(255, 217, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 10;
+    box-shadow:
+        inset 2px 2px 3px #ffffffbb,
+        inset -2px -2px 3px #727272bb,
+        0 0 5px 20px rgba(255, 252, 224, 0.226),
+        0 0 5px 40px rgba(255, 253, 238, 0.24),
+        0 0 5px 60px rgba(255, 255, 255, 0.171);
+}
+
+label input:checked::before {
+    background-color: rgb(255, 136, 0);
+    transform: translate(-150%, 70%);
+    box-shadow: none;
+}
+
+
+label span,
+label span::before,
+label span::after {
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    position: absolute;
+    transition: 1s;
+}
+
+label span::after,
+label span::before {
+    content: '';
+    position: absolute;
+
+}
+
+label #cloud1 {
+    width: 40px;
+    transform: translate(-100%, 90%);
+    z-index: 1;
+}
+
+label #cloud1::after {
+    width: 80%;
+    transform: translate(90%, 20%);
+}
+
+label #cloud1::before {
+    width: 80%;
+    transform: translate(-90%, 20%);
+}
+
+
+label #cloud2 {
+    width: 60px;
+    transform: translate(90%, 52%);
+    z-index: 1;
+
+}
+
+label #cloud2::before {
+    width: 80%;
+    transform: translate(-70%, 30%);
+}
+
+label #cloud2::after {
+    width: 90%;
+    transform: translate(91%, -27%);
+}
+
+
+label .cloud-bg,
+label .cloud-bg::before,
+label .cloud-bg::after {
+    background-color: #b4ecff;
+
+}
+
+label #cloudbg1 {
+    width: 40px;
+    transform: translate(-62%, 65%);
+
+}
+
+label #cloudbg1::before {
+    width: 80%;
+    transform: translate(-75%, 20%);
+}
+
+label #cloudbg1::after {
+    width: 110%;
+    transform: translate(60%, -20%);
+}
+
+label #cloudbg2 {
+    width: 40px;
+    transform: translate(140%, -3%);
+}
+
+label #cloudbg2::before {
+    width: 70%;
+    transform: translate(-82%, 67%);
+}
+
+label #cloudbg2::after {
+    width: 110%;
+    transform: translate(68%, 1%);
+}
+
+
+/* CHECKED */
+
+label.checked {
+    background-color: #282e68;
+    box-shadow:
+        inset 3px 3px 3px #171a33,
+        -1px -1px 2px #18181894,
+        2px 2px 2px #1b1b1b83;
+}
+
+input::after {
+    content: '';
+    width: 20%;
+    height: 50%;
+    background-color: rgb(65, 65, 65);
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(140%, -245%);
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 10;
+    box-shadow:
+        -14px 1px 0px 10px rgb(109, 109, 109),
+        -14px 0px 2px 11px rgb(121, 121, 121),
+        -13px 2px 0px 10px rgb(71, 71, 71),
+        -15px 0px 0 11px rgb(180, 180, 180);
+    /* moon */
+}
+
+
+input:checked:after {
+    transform: translate(140%, -50%);
+}
+
+
+label.checked span,
+label.checked span::before,
+label.checked span::after {
+    background-color: rgb(224, 224, 224);
+}
+
+label.checked #cloud1 {
+    width: 80px;
+    transform: translate(-80%, 50%);
+}
+
+label.checked #cloud1::after {
+    width: 50%;
+    transform: translate(150%, 30%);
+}
+
+label.checked #cloud1::before {
+    width: 80%;
+    transform: translate(-63%, -30%);
+}
+
+
+label.checked #cloud2 {
+    width: 30px;
+    transform: translate(110%, 100%);
+}
+
+label.checked #cloud2::before {
+    width: 120%;
+    transform: translate(-70%, 0%);
+}
+
+label.checked #cloud2::after {
+    width: 130%;
+    transform: translate(71%, 7%);
+}
+
+label.checked .cloud-bg,
+label.checked .cloud-bg::before,
+label.checked .cloud-bg::after {
+    background-color: rgb(199, 199, 199);
+}
+
+label.checked #cloudbg1 {
+    width: 80px;
+    transform: translate(-62%, 30%);
+}
+
+label.checked #cloudbg1::before {
+    width: 80%;
+    transform: translate(-55%, -20%);
+}
+
+label.checked #cloudbg1::after {
+    width: 40%;
+    transform: translate(190%, 50%);
+}
+
+label.checked #cloudbg2 {
+    width: 40px;
+    transform: translate(70%, 50%);
+}
+
+label.checked #cloudbg2::before {
+    width: 70%;
+    transform: translate(-52%, 20%);
+}
+
+label.checked #cloudbg2::after {
+    width: 70%;
+    transform: translate(78%, 10%);
+}
+
+
+label .star {
+    background-color: transparent;
+    transition: 1s;
+    z-index: 1;
+
+}
+
+/* label.checked .star {
+    background-color: #fff;
+    width: 2px;
+    box-shadow: 
+        0 0 3px #ffffff1c,
+        0 0 6px #ffffff1c,
+        0 0 9px #ffffff1c;
+} */
